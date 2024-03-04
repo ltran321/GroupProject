@@ -25,6 +25,7 @@
    			<input type="submit" value="Submit"/>
    			<input type="reset" value="Reset"/>
    		</form>
-	</div>
+	</div><br>
 </body>
 </html>
+<jsp:include page="footer.jsp" />
