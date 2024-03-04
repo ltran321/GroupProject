@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>One CMA and three CAs are divided between adjacent provinces</title>
+<title>One CMA and three CAs divided between adjacent provinces</title>
 </head>
 <body>
 <%
