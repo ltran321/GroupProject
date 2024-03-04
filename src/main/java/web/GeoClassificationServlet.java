@@ -26,22 +26,9 @@ public class GeoClassificationServlet extends HttpServlet {
 			geoClass = DBUtil.getGeoAreaClassList(level);
 			RequestDispatcher rd;
 			req.setAttribute("geoClassList", geoClass);
-			
-			if (level == 0) {
-				rd = req.getRequestDispatcher("levelZero.jsp");
-				rd.forward(req, resp);
-			} else if (level == 1) {
-				rd = req.getRequestDispatcher("levelOne.jsp");
-				rd.forward(req, resp);
 
-			} else if (level == 2) {
-				rd = req.getRequestDispatcher("levelTwo.jsp");
-				rd.forward(req, resp);
-
-			} else if (level == 3) {
-				rd = req.getRequestDispatcher("levelThree.jsp");
-				rd.forward(req, resp);
-			}
+			rd = req.getRequestDispatcher("geoClassList.jsp");
+			rd.forward(req, resp);
 
 		} catch (Exception e) {
 			e.printStackTrace();

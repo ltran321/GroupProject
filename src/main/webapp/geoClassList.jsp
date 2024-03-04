@@ -7,13 +7,13 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Provinces and Territories</title>
-</head>
-<body>
 <%
     List<GeographicClassification> geoClassList = (List<GeographicClassification>) request.getAttribute("geoClassList");
 %>
-<h3>Level 1</h3>
+<title>Level <%= geoClassList.get(0).getLevel() %></title>
+</head>
+<body>
+<h3>Level <%= geoClassList.get(0).getLevel() %></h3>
 <% for (GeographicClassification geoClass : geoClassList) { %>
     <p><%= geoClass.getName() %></p>
 <% } %>
