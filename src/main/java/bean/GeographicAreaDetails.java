@@ -7,6 +7,13 @@ public class GeographicAreaDetails {
 	private int level;
 	private int population;
 	
+	public GeographicAreaDetails(String name, int code, int level, int population) {
+		this.name = name;
+		this.code = code;
+		this.level = level;
+		this.population = population;
+	}
+	
 	public String getName() {
 		return name;
 	}

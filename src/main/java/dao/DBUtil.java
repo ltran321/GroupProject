@@ -10,13 +10,14 @@ import java.util.List;
 
 import bean.GeographicAreaDetails;
 import bean.AgeList;
+import bean.GeographicArea;
 import bean.GeographicClassification;
 
 public class DBUtil {
 
 	private static final String DB_URL = "jdbc:mysql://localhost:3306/canadacensusdb";
 	private final static String USER = "root";
-	private final static String PASS = "Secret55!";
+	private final static String PASS = "root";
 	
 	//checks if the db connected
 	public static boolean isDBConnected(String username, String password) {
@@ -67,19 +68,24 @@ public class DBUtil {
 		
 	}
 	
-	// get a list of geographic area IDs
-	public static List<Integer> getGeographicAreaIDs() throws SQLException {
-        List<Integer> areaIDs = new ArrayList<>();
-        try (Connection conn = DriverManager.getConnection(DB_URL,USER,PASS);
-             PreparedStatement preparedStatement = conn.prepareStatement("SELECT geographicAreaID FROM geographicarea");
+	// get a list of geographic area IDs along with the name
+	public static List<GeographicArea> getGeographicAreaIDsWithNames() throws SQLException {
+        List<GeographicArea> areaList = new ArrayList<>();
+        String query = "SELECT geographicAreaID, name FROM geographicarea ORDER BY geographicAreaID";
+        try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+             PreparedStatement preparedStatement = conn.prepareStatement(query);
              ResultSet rs = preparedStatement.executeQuery()) {
             while (rs.next()) {
-                areaIDs.add(rs.getInt("geographicAreaID"));
+                int areaID = rs.getInt("geographicAreaID");
+                String name = rs.getString("name");
+                GeographicArea area = new GeographicArea(areaID, name);
+                areaList.add(area);
             }
         }
-        return areaIDs;
+        return areaList;
     }
 	
+	// get geographic area details
 	public static GeographicAreaDetails getGeographicAreaDetails(String areaID) throws SQLException {
 		String query = "SELECT ga.name, ga.code, ga.level, SUM(age.combined) AS total_population " +
                 		"FROM geographicarea ga " +
