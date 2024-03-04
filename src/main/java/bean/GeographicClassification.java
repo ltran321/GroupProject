@@ -5,6 +5,11 @@ public class GeographicClassification {
 	private String name;
 	private int level;
 	
+	public GeographicClassification(int geoLevel, String geoName) {
+		this.level = geoLevel;
+		this.name = geoName;
+	}
+
 	public String getName() {
 		return name;
 	}
