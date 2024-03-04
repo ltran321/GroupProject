@@ -1,0 +1,93 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 12-Feb-2022, 12:20:42 PM
+    Author     : Group 13
+*/
+
+html {
+	background-image: -webkit-linear-gradient(45deg, #f3bfd6 0%, #f3bfd6 25%, white 100%);
+}
+
+body  {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 10 auto;
+    padding: 0;
+    border: 2px solid black;
+}
+
+body p, h2, h3 {
+    margin-left: 30px;
+}
+
+/* Footer */
+footer {
+    border-top: 2px solid pink;
+    padding: 10px;
+    text-align: right;
+    
+}
+
+/* Header */
+header img {
+    float: left;
+    padding-right: 15px;
+    margin-left: 10px;
+}
+
+header h2 {
+    font-size: 230%;
+    text-align: left;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+header h3 {
+    font-size: 100%;
+    padding-top: 0;
+    padding-bottom: 15px;
+    text-align: left;
+}
+
+.topnav {
+    border-top: 2px solid pink;
+    border-bottom: 2px solid pink;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.topnav-right{
+    float: right;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.topnav-right a {
+    margin-top: 0;
+    padding-top: 0;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* Form */
+form{
+    margin-left: 10px;
+}
+
+label{
+    font-weight: bold;
+}
+
+.pink{
+    color: #EB7DB7;
+}
+
+.error{
+    border: red 1px solid;
+}
+
