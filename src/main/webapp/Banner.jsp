@@ -22,7 +22,7 @@
                 <div class="topnav-right">
                    <a class="pink" href="index.jsp">Geographic Area Classification List</a>
                    | <a class="pink" href="geoAreaDetailsServlet">Individual Geographic Area Details</a>
-                   | <a class="pink" href="ageList.jsp">Age List</a>
+                   | <a class="pink" href="ageListServlet">Age List</a>
 
                 </div>
                 <br>
